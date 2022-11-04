@@ -2,7 +2,7 @@
 
 name: "Report LCOV - Node16"
 description: "Report the code coverage from LCOV files. Updated for Node16"
-author: "Zennon Gosalvez"
+author: "Francesco Battaglini (based on work from Zennon Gosalvez)"
 inputs:
   coverage-files:
     description: "The coverage files to scan. For example, `coverage/lcov.*.info`"
