@@ -23,7 +23,7 @@ async function run() {
     const minimumCoverage = core.getInput('minimum-coverage');
     const gitHubToken = core.getInput('github-token').trim();
     const errorMessage = `The code coverage is too low. Expected at least ${minimumCoverage}.`;
-    const isFailure = totalCoverage < minimumCoverage;
+    const isFailure = totalCoverage < parseInt(minimumCoverage);
 
     if (gitHubToken !== '' && github.context.eventName === 'pull_request') {
       const octokit = await github.getOctokit(gitHubToken);
